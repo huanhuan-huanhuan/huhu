@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f5;
+  --color-primary: #513825;
+  --color-primary-container: #6b4f3a;
+  --color-secondary: #6b5582;
+  --color-on-surface: #1e1b19;
+  --color-on-surface-variant: #4f453e;
+  --color-outline-variant: #d3c4ba;
+  --color-inverse-primary: #e5bfa5;
+  --color-on-primary-fixed: #2b1706;
+  --font-serif: 'EB Garamond', serif;
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.cinematic-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-on-surface);
+  animation: sweep 1.2s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes sweep {
+  0% { transform: scaleX(0); opacity: 1; }
+  60% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
